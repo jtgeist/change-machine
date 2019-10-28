@@ -18,13 +18,10 @@ functions:
     handler: handler.graphqlHandler    
     events:      
       - http:          
-        method: post
-        path: graphql
-        cors: true
-  playground:
-    handler: handler.playgroundHandler
-    events:
-    - http:
-        path: graphql
-        method: get
-        cors: true
+          method: post
+          path: graphql
+          cors: true
+      - http:          
+          method: get
+          path: graphql
+          cors: true

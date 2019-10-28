@@ -1,5 +1,4 @@
 import { ApolloServer, gql } from 'apollo-server-lambda';
-import lambdaPlayground from 'graphql-playground-middleware-lambda';
 
 const typeDefs = gql`
   type Query {
@@ -19,5 +18,3 @@ const server = new ApolloServer({
 });
 
 exports.graphqlHandler = server.createHandler();
-
-exports.playgroundHandler = lambdaPlayground({});
