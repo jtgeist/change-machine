@@ -1,0 +1,12 @@
+type Query {
+    hello: String
+}
+
+type Query {
+    getClosestCoin(cents: Int): Coin
+}
+
+type Coin {
+    name: String
+    denomination: Int
+}

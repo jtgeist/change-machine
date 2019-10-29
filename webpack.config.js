@@ -18,6 +18,11 @@ module.exports = {
     rules: [
       // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
       { test: /\.tsx?$/, loader: 'ts-loader' },
+      {
+        exclude: /node_modules/,
+        test: /\.graphql$/,
+        use: [{ loader: 'graphql-import-loader' }]
+      }
     ],
   },
 };
